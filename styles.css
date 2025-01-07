@@ -1,0 +1,171 @@
+body {
+    font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #101010; /* Pastel green background color */
+    color: #c4c4c4; /* Pastel green text color */
+    padding: 0;
+}
+h1 {
+    font-family: 'Bahschrift', sans-serif;
+    color: #ffffff; /* Pastel green color */
+    background-color: #202020; /* Pastel green background color */
+    padding: 10px;
+    text-align: left;
+    margin: 0;
+}
+a {
+    color: #81C784; /* Pastel green link color */
+    text-decoration: none;
+    text-rendering: geometricPrecision;
+}
+h2 {
+    color: #4E6E58; /* Pastel green color */
+    background-color: #C8E6C9; /* Pastel green background color */
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+h3 {
+    color: #4E6E58; /* Pastel green color */
+    background-color: #C8E6C9; /* Pastel green background color */
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+.topics {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.topics div {
+    flex: 1;
+    margin: 0 10px; /* Add margin between dividers */
+    text-align: center;
+    background-color: #C8E6C9; /* Pastel green background color for dividers */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for dividers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topics h3 {
+    font-weight: bold; /* Make the header text bold */
+}
+.topics button {
+    background-color: #A5D6A7; /* Pastel green button color */
+    color: #4E6E58; /* Pastel green text color */
+    border: none;
+    padding: 20px 60px; /* Increased padding for larger buttons */
+    font-size: 20px; /* Larger font size */
+    font-weight: bold; /* Make button text bold */
+    cursor: pointer;
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make buttons full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.topics button:hover {
+    background-color: #81C784; /* Darker pastel green on hover */
+}
+.topics p {
+    margin-top: 10px; /* Add margin to separate text from button */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes fallFromAbove {
+    from {
+        top: -100%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+header {
+    display: flex;
+    justify-content: flex-start; /* Align the header content to the left */
+    align-items: center;
+    background-color: #202020; /* Medium pastel green background color */
+    padding: 5px; /* Reduce padding to make the header smaller */
+    height: 60px; /* Set the height of the header */
+    position: fixed; /* Make the header fixed */
+    width: 100%; /* Make the header full width */
+    top: 0; /* Position the header at the top */
+    z-index: 1000; /* Ensure the header is above other content */
+}
+.header-links {
+    display: flex;
+    gap: 15px; /* Space between links */
+    margin-left: 20px; /* Add margin to the left of the links */
+}
+.header-links a {
+    color: #437953; /* White text color for better contrast */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+main {
+    padding-top: 60px; /* Add padding to avoid content being hidden behind the fixed header */
+}
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #E8F5E9; /* Same pastel green background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it is above other content */
+}
+#loading-screen img {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto;
+}
+body.loading #loading-screen {
+    display: flex;
+}
+body:not(.loading) #loading-screen {
+    display: none;
+}
+@media (max-width: 768px) {
+    .topics {
+        flex-direction: column;
+        align-items: center;
+    }
+    .topics div {
+        margin: 10px 0; /* Adjust margin for vertical alignment */
+    }
+    .topics button {
+        width: 100%; /* Make buttons full width */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+    header {
+        flex-direction: row; /* Keep header links in a row */
+        height: auto; /* Adjust height for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+        justify-content: space-between; /* Space out header links */
+    }
+    .header-links {
+        flex-direction: row; /* Keep header links in a row */
+        align-items: center;
+        margin-left: 0; /* Remove left margin */
+        gap: 10px; /* Adjust gap between links */
+        flex-wrap: wrap; /* Allow wrapping of links */
+    }
+    .header-links a {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    main {
+        padding-top: 80px; /* Adjust padding to avoid content being hidden behind the fixed header */
+    }
+}
