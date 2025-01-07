@@ -2,7 +2,7 @@ body {
     font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #101010; /* Pastel green background color */
+    background-color: #0d0d0d; /* Pastel green background color */
     color: #c4c4c4; /* Pastel green text color */
     padding: 0;
 }
@@ -15,20 +15,20 @@ h1 {
     margin: 0;
 }
 a {
-    color: #81C784; /* Pastel green link color */
+    color: #c4c4c4; /* Pastel green link color */
     text-decoration: none;
     text-rendering: geometricPrecision;
 }
 h2 {
-    color: #4E6E58; /* Pastel green color */
-    background-color: #C8E6C9; /* Pastel green background color */
+    color: #c4c4c4; /* Pastel green color */
+    background-color: #0d0d0d; /* Pastel green background color */
     padding: 10px;
     text-align: center;
     margin: 0;
 }
 h3 {
-    color: #4E6E58; /* Pastel green color */
-    background-color: #C8E6C9; /* Pastel green background color */
+    color: #c4c4c4; /* Pastel green color */
+    background-color: #0d0d0d; /* Pastel green background color */
     padding: 10px;
     text-align: center;
     margin: 0;
@@ -42,7 +42,7 @@ h3 {
     flex: 1;
     margin: 0 10px; /* Add margin between dividers */
     text-align: center;
-    background-color: #C8E6C9; /* Pastel green background color for dividers */
+    background-color: hsl(0, 0%, 8%); /* Pastel green background color for dividers */
     padding: 20px;
     border-radius: 10px; /* Rounded corners for dividers */
     display: flex;
@@ -53,9 +53,9 @@ h3 {
     font-weight: bold; /* Make the header text bold */
 }
 .topics button {
-    background-color: #A5D6A7; /* Pastel green button color */
-    color: #4E6E58; /* Pastel green text color */
-    border: none;
+    background-color: #0d0d0d; /* Pastel green button color */
+    border-width: 0;
+    color: hsl(230, 10%, 24%); /* Pastel green text color */
     padding: 20px 60px; /* Increased padding for larger buttons */
     font-size: 20px; /* Larger font size */
     font-weight: bold; /* Make button text bold */
@@ -66,7 +66,8 @@ h3 {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 .topics button:hover {
-    background-color: #81C784; /* Darker pastel green on hover */
+    background-color:  hsl(230, 10%, 28%); /* Darker pastel green on hover */
+    color: #c4c4c4;
 }
 .topics p {
     margin-top: 10px; /* Add margin to separate text from button */
@@ -95,7 +96,7 @@ header {
     display: flex;
     justify-content: flex-start; /* Align the header content to the left */
     align-items: center;
-    background-color: #202020; /* Medium pastel green background color */
+    background-color: hsl(0, 0%, 8%); /* Medium pastel green background color */
     padding: 5px; /* Reduce padding to make the header smaller */
     height: 60px; /* Set the height of the header */
     position: fixed; /* Make the header fixed */
@@ -109,10 +110,14 @@ header {
     margin-left: 20px; /* Add margin to the left of the links */
 }
 .header-links a {
-    color: #437953; /* White text color for better contrast */
+    color: hsl(230, 10%, 24%); /* White text color for better contrast */
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
+}
+.header-links a:hover
+{
+    color: hsl(230, 10%, 34%);
 }
 main {
     padding-top: 60px; /* Add padding to avoid content being hidden behind the fixed header */
@@ -121,7 +126,7 @@ main {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #E8F5E9; /* Same pastel green background color */
+    background-color: #0d0d0d; /* Same pastel green background color */
     display: flex;
     justify-content: center;
     align-items: center;
